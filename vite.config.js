@@ -17,13 +17,13 @@ export default defineConfig({
   // ],
 
   // Customize the Vite build configuration
-  build: {
-    rollupOptions: {
-      // ...other options
+  // build: {
+  //   rollupOptions: {
+  //     // ...other options
 
-      // Mark 'module-name' as an external dependency
-      external: ['@firebase/app']
-    }
-  }
+  //     // Mark 'module-name' as an external dependency
+  //     external: ['@firebase/app']
+  //   }
+  // }
 });
 
