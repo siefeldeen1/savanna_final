@@ -1,11 +1,7 @@
 import React from "react";
 import "../competitor/competitor.css";
 import Chat from "../../components/Chat";
-import EBAY from "/imgs/ebay.svg";
-import AMAZON from "/imgs/amazon.svg";
-import FLIPKART from "/imgs/flipkart.svg";
-import MYNTRA from "/imgs/myntra.svg";
-import AJIO from "/imgs/ajio.svg";
+
 import axios from "axios";
 import { useEffect } from "react";
 
