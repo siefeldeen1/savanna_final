@@ -1,0 +1,160 @@
+.random-chat {
+  border-radius: 0px 12px 12px 0px !important;
+}
+.chat_market {
+  border-radius: 0 12px 12px 0;
+    background: rgba(120,120,120,.1);
+    box-shadow: -24px 0 80px #314f7c05;
+    height: calc(100vh - var(--sl-header-height));
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: fixed !important;
+    top: var(--sl-header-height);
+    /* z-index: 99999999; */
+    right: 0;
+    border-radius: 0 23px 13px 0;
+    width: 25%;
+    /* margin-top: 11px; */
+}
+
+.market_input {
+  border-radius: 7px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: -24px 0px 80px 0px rgba(49, 79, 124, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 10px;
+}
+
+.market_input > input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.market_input > input::placeholder {
+  color: #8c8c8c;
+}
+
+.inner_sent2 {
+  color: #363636;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 10px;
+}
+
+.received_message2 {
+  display: flex;
+  justify-content: start;
+  width: 92%;
+}
+
+.sent_message2 {
+  display: flex;
+  justify-content: end;
+  width: 96%;
+  position: relative;
+}
+.inner_received2 {
+  margin-left: 5px;
+  display: flex;
+  gap: 5px;
+  color: #363636;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.img_class {
+  width: 24px;
+  height: 17.143px;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .chat_market {
+    position: relative!important;
+    width: 100%;
+    top:0;
+    bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .chat_market{
+    width:27%;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .chat_market{
+    width:27%;
+  }
+.market_input {
+  margin-right: 19px;
+}
+}
+
+@media screen and (min-width: 2000px) {
+  .chat_market{
+    width:27%;
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width:1200px) {
+  .chat_market{
+    width:24%;
+    right:0;
+  }
+}
+
+@media screen and (min-width: 1150px) and (max-width:1200px) {
+  .chat_market{
+    width: 24%;
+    /* right: 26px; */
+}
+
+  
+.market_input {
+  margin: 12px 16px 12px 12px;
+}
+
+}
+
+@media screen and (min-width: 1180px) and (max-width:1200px) {
+  .market_input {
+    margin: 12px 30px 12px 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width:1300px) {
+  .market_input {
+    margin: 12px 38px 12px 12px;
+  }
+}
+
+@media screen and (min-width: 1300px)and (max-width:1500px) {
+  .market_input {
+    margin: 12px 18px 12px 12px;
+  }
+}
+
+@media screen and (min-width: 1600px) and (max-width:1800px) {
+  .chat_market{
+    width:26%;
+  }
+}

@@ -1,0 +1,479 @@
+* {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+.General {
+  display: grid;
+  grid-template-columns: 66% 30%;
+  justify-content: space-between;
+  width: 79%;
+  padding: 10px 10px;
+  background: #f6f6f6;
+  border-radius: 12px;
+}
+
+.segmentation {
+  padding: 13px 0 13px 0;
+  /* overflow: hidden; */
+}
+
+.Geo-container {
+  background: #eaeaea;
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+
+.distributions {
+  display: grid;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.flex-geo {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  align-items: start;
+  margin-top: 2rem;
+  /* margin: 8px; */
+  line-height: 2.5;
+  width: 100%;
+  /* border-radius: 8px; */
+}
+
+.flex-traffic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.progress {
+  width: 50%;
+}
+
+.flex-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  /* width:50%; */
+}
+
+
+.countries_head_cell {
+  background-color: #b8b8b8;
+}
+
+.countries_cell {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  color:#565656;
+  border-right: 1px solid #bdbdbd;
+}
+
+.traffic_cell{
+ 
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+
+.joined_header{
+  background-color: #d9d9d9;
+}
+
+.seg_table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.seg_td, .seg_th {
+  text-align: left;
+  padding: 8px;
+}
+
+.seg_th{
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+
+
+.country_div_cell{
+  padding-right: 10px;
+}
+
+/* .Traffic > div {
+  padding-left: 1rem;
+} */
+
+.Trend {
+  text-align: right;
+}
+
+.countries > h3 {
+  background: #b8b8b8;
+  padding-left: 6px;
+}
+
+
+
+.Traffic > h3 {
+  background: #d9d9d9;
+}
+
+.Trend > h3 {
+  background: #d9d9d9;
+}
+
+.Trend > div {
+  /* padding-right: 30px; */
+}
+
+.demographic {
+  background: #eaeaea;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+
+.flex-income {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* width:50%; */
+  gap: 12rem;
+}
+
+#h5 {
+  font-size: 14px;
+}
+
+.demographic > div:nth-child(3) > h3 {
+  margin-top: 3rem;
+}
+
+.demographic > h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+.flex-Edu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 24rem; */
+  /* width: 50%; */
+}
+
+.flex-Edu > p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.groupflex2 {
+  line-height: 2.8;
+  width: 100%;
+}
+
+.flex-Edu > h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.flex-Edu1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 28rem; */
+}
+
+.flex-Edu1 > p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.flex-Edu1 > h5 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.Edu-progress {
+  width: 100%;
+}
+
+.groupflex {
+  width: 100%;
+}
+
+.Edu-Container {
+  line-height: 2.2;
+  margin-top: 2rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: start;
+  gap: 3.5rem;
+  width: 100%;
+  /* display: flex;
+  align-items: flex-start; */
+}
+
+/* .Text-house {
+  width: 22%;
+} */
+
+.Income-cont {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 6rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.gender-group {
+  background: #b9b9b9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 66%;
+  /* padding: 12px 24px; */
+  padding: 0px 8px 0 0px;
+  border-radius: 6px;
+}
+
+.gender-cont {
+  display: flex;
+  align-items: baseline;
+  gap: 6rem;
+  margin-top: 2rem;
+  /* justify-content: center; */
+}
+
+.female {
+  background: #fd6333;
+  padding: 12px 16px;
+  border-radius: 6px;
+  display: flex;
+  gap: 5px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.female > p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.male > p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.male {
+  display: flex;
+  gap: 5px;
+  font-size: 16px;
+}
+
+.Employment-container {
+  margin-top: 2rem;
+  line-height: 2.5;
+  display: flex;
+  align-items: baseline;
+  justify-content: start;
+  gap: 1rem;
+  width: 100%;
+  /* display: flex;
+  align-items: flex-start; */
+}
+
+.Age-container {
+  margin-top: 2rem;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* .Text{
+  width: 10%;
+} */
+
+.bar-cont{
+  width:80%;
+  height: 100%;
+}
+
+#Age-bar{
+  width: 100% !important;
+  height: 100% !important;
+}
+.flex-Aundience {
+  display: flex;
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+}
+
+.outside-demographic {
+  margin-top: 2rem;
+  margin-left: 3rem;
+}
+
+.outside-demographic > h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.Education {
+  text-align: center;
+}
+/* .Education > span{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+} */
+
+h1 {
+  font-size: 22px;
+  /* font-weight: 500; */
+}
+
+span > h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #454545;
+}
+
+span > p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #7d7d7d;
+}
+
+.flex-ontop {
+  display: flex;
+  flex-direction: column;
+  gap: -2px;
+}
+
+.flex-beside {
+  display: flex;
+  align-items: flex-start;
+  gap: 6rem;
+  line-height: 2;
+}
+
+.person > p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top_1 {
+  height: 35px;
+  width: 130px;
+  margin-bottom: -5px;
+  background: #dbdbdb;
+  border-radius: 6px 6px 0px 0px;
+}
+
+.top_2 {
+  height: 45px;
+  width: 130px;
+  margin-bottom: -5px;
+  background: #b9b9b9;
+  border-radius: 6px 6px 0px 0px;
+}
+
+.top_3 {
+  height: 55px;
+  width: 130px;
+  margin-bottom: -5px;
+  background: #7c7c7c;
+  border-radius: 6px 6px 0px 0px;
+}
+
+.top_4 {
+  height: 65px;
+  width: 130px;
+  margin-bottom: -5px;
+  background: #5b5b5b;
+  border-radius: 6px 6px 6px 6px;
+}
+
+.Household-container {
+  gap: 3rem;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.Audience-cont{
+  /* width: 100%; */
+  /* max-width: 600px; */
+}
+
+.flex-general {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+  justify-content: space-around;
+  /* width: 65%; */
+}
+
+.person > p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.percentage > p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#heading {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 0;
+  /* height: 2em */
+}
+
+
+@media screen and (max-width: 800px) and (min-width: 0px){
+  .gender-cont{
+    flex-direction: column;
+  }
+
+  .General{
+    padding: 10px;
+  }
+
+  .gender-group{
+    width: unset;
+  }
+
+  .respon_data_seg{
+    flex-direction: column;
+  }
+
+  .bar-cont{
+    width: 100%;
+  }
+
+  .Age-container{
+    gap: 4rem;
+  }
+}
+
+

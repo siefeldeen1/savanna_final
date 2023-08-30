@@ -1,0 +1,50 @@
+.container_seg {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: 30% 30% 30%;
+  /* margin-top: 2rem; */
+}
+
+.columnn_bar_seg {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  border-radius: 6px;
+  background-color: #d9d9d9;
+  margin-top: 10px;
+  /* gap: 2rem; */
+}
+
+.container > div > h2{
+  font-size: 16px;
+  font-weight:600;
+}
+
+.container > div > p{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.inner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 6px;
+  background: #9c9c9c;
+}
+
+@media screen and (max-width: 1210px){
+  .columnn {
+    width: 110px;
+  }
+
+}
+@media screen and (max-width: 830px){
+.columnn {
+  width: 130px;
+}
+}

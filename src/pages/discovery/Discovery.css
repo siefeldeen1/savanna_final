@@ -1,0 +1,218 @@
+.discovery{
+    display: grid;
+    grid-template-columns: 68% 32%;
+    width: 100%;
+    background: white;
+    /* padding: 10px; */
+
+    border-radius: 12px;
+    height: fit-content;
+}
+
+.tutorial{
+    width:100%;
+}
+
+.chat{
+    display: flex;
+    border-radius: 20px;
+    height: calc(99vh - var(--sl-header-height));
+    flex-direction: column;
+    gap: 14px;
+
+  background: #F6F6F6;
+    /* padding-top: 10px; */
+    
+}
+
+.chat_body{
+    height: 89%;
+    width: 100%;
+    overflow-y: auto;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    gap: 16%;
+    border-radius: 12px;
+}
+.lower_chat{
+    display: flex;
+    align-items: end;
+    width: 100%;
+    /* height: 98%; */
+    gap: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    background-color: #F6F6F6;
+}
+
+.check_list{
+    background: rgba(120, 120, 120, 0.10);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.checklist_upperpart{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 1.3rem;
+}
+
+.checklist_header{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.checklist_text{
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; 
+}
+
+.sent_message{
+    display: flex;
+    justify-content: end;
+    width: 98%;
+    position: relative;
+}
+
+.inner_sent{
+    margin-right: 35px;
+    color: #363636;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; 
+    padding: 10px;
+}
+.user_body{
+    position: absolute;
+    right: -0;
+    bottom: -22px;
+    
+}
+
+.user_body>img{
+    width: 40px;
+    height: 40px;
+}
+
+
+.received_message{
+    display: flex;
+    justify-content: start;
+    width: 98%;
+    position: relative;
+   
+}
+
+.inner_received{
+    margin-left: 38px;
+    color: #363636;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; 
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+   
+}
+.bot_body{
+    position: absolute;
+    left: 13px;
+    bottom: -22px;
+    background-color: #444444;
+    border-radius: 50%;
+    padding: 9px 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .bot_body>img{
+    width: 30px;
+    height: 30px;
+} */
+
+.checklist_lower{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.checklist_item_header{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    color: #000;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.checklist_items>input{
+    width: 22px;
+    height: 22px;
+
+}
+
+
+.checklist_items{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    
+}
+
+.btn_div{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    margin-bottom: 10px;
+}
+.genrate_btn{
+    border-radius: 12px;
+    background: #0084FF;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+    border: none;
+    outline: none;
+    padding: 12px 10px;
+    width: 100%;
+}
+
+.genrate_btn:hover{
+    opacity: 0.7;
+}
+
+.checkbox{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) and (min-width: 0px){
+  
+    .discovery{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+     
+      
+    }
+     
+  
+    
+}

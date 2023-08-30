@@ -1,0 +1,501 @@
+* {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+.General {
+  background: #fff;
+  display: grid;
+  display: flex;
+  grid-template-columns: 68% 31%;
+  justify-content: space-between;
+  gap: 1rem;
+  /* padding: 13px; */
+  border-radius: 12px;
+  margin-bottom: .4rem;
+  width: 79%;
+}
+
+.percent {
+  width: 100%;
+  background: #F9F9F9;
+  padding: 12px 24px;
+  height: 9em;
+  margin-top: 2rem;
+  border-radius: 6px;
+}
+
+.percent > span > p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.percent > span > h3 {
+  font-size: 28px;
+}
+
+.stats_wrapper_compatitor {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.competitive >h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* .competitive > h1{
+    margin-top: 2rem;
+  } */
+
+.competitive {
+  background: #E9E9E9;
+  padding: 20px 20px;
+  margin:12px 5px 0 0;
+  border-radius: 12px;
+}
+
+.market-share{
+  margin: 12px 5px;
+  /* overflow: auto; */
+}
+
+.market-price{
+  margin: 12px 5px;
+}
+
+.Grid-socio {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  width: 100%;
+  /* gap:1rem; */
+  /* justify-content: center; */
+}
+
+.socio {
+  width: 52%;
+}
+
+.geography >h2{
+  font-size: 20px;
+  font-weight: 500;
+  color: #747474;
+}
+
+.socio >h2{
+  font-size: 20px;
+  font-weight: 500;
+  color: #747474;
+}
+
+.flex-target {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.household {
+  background: #f9f9f9;
+  width: 41%;
+  height: 81px;
+  padding: 11px 12px;
+}
+
+#household {
+  border-right: 1px solid #e7e7e7;
+  border-radius: 6px 0 0 0;
+  /* padding-left: 5px; */
+}
+
+#employment {
+  border-right: 1px solid #e7e7e7;
+  border-top: 1px solid #e7e7e7;
+  border-radius: 0 0 0 6px;
+}
+
+#interest {
+  /* border-right:1px solid #E7E7E7; */
+  border-top: 1px solid #e7e7e7;
+  border-radius: 0 0 6px 0;
+}
+
+#education {
+  border-radius: 0 6px 0 0;
+}
+
+.household > span > p {
+  font-size: 13px;
+  color: #4D4D4D;
+  font-weight: 500;
+}
+
+.household > span > h4 {
+  font-size: 16px;
+  color:#000;
+  font-weight: 600;
+}
+
+.flex-geography {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 8px;
+  background: #f9f9f9;
+  padding: 6px 12px;
+  line-height: 2.8;
+}
+
+p {
+  font-size: 12px;
+}
+
+h3 {
+  font-size: 12px;
+}
+
+/* .countries{
+    min-width: 100px;
+  } */
+
+.market-price > h2 {
+  font-size: 30px;
+  font-weight:600;
+}
+
+.geography {
+  width: 46%;
+}
+
+#share-table {
+  margin: 25px 0;
+  width: 100%;
+  border-spacing: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#head{
+  border-bottom: 1px solid #dddddd;
+  border-radius: 10px;
+}
+
+/* table{
+  border-radius: 12px;
+} */
+
+table thead tr {
+  /* background-color: #009879; */
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+#stat th {
+  padding: 8px 5px;
+  /* padding: 8px 5px; */
+    color: #444444;
+    font-size: 12px;
+    font-weight: 500;
+    border-bottom: 1px solid #C3C3C3;
+  /* border-radius: 10px; */
+
+}
+
+#share-head{
+  text-align: center;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+#unique-th{
+  text-align: center;
+}
+
+#head{
+  background:#F9F9F9;
+}
+
+
+#row:nth-child(odd){
+  background: #F6F6F6;
+  color:red;
+  color: #4D4D4D;
+}
+
+#share-content:nth-child(odd){
+  background: #F6F6F6;
+  width: 8%;
+}
+
+#share-head{
+  background: #EFEFEF;
+  padding: 8px;
+  color: #505050;
+}
+
+#share-content{
+  color: #767676;
+  text-align: center;
+  width: 8%;
+}
+
+#share-content1{
+  background: #F6F6F6;
+  text-align: center;
+  width: 20%;
+}
+
+
+#row:nth-child(even){
+  background: #FAFAFA;
+  color:#4D4D4D
+}
+
+th{
+  /* border-right:1px solid #dddddd; */
+  /* text-align: center; */
+  color: #000;
+  /* background: #F9F9F9; */
+}
+
+
+
+#column{
+  border: none ;
+  text-align: left;
+}
+
+#coluumn{
+  border: none ;
+  text-align: center; 
+  color:#06B818
+}
+
+#colummn{
+  border: none ;
+  text-align: center; 
+  color:#E01717
+}
+
+
+
+td:last-of-type{
+  border: none;
+}
+
+
+#stat{
+  /* margin: 25px 0; */
+  width: 100%;
+  border-spacing: 0;
+  margin-top: 2px;
+  line-height: 1.5;
+  /* padding: 3px; */
+  border-radius: 8px;
+  overflow: hidden;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
+}
+
+
+#stat tbody tr.active-row {
+  font-weight: bold;
+  /* color: #009879; */
+}
+
+.coming-soon {
+  background: linear-gradient(0deg, #b4b4b4 0%, #dcdcdc 57.6%, #f3f3f3 100%);
+  padding: 150px 12px 12px 12px;
+  border-radius: 6px;
+}
+
+.coming-soon > h3 {
+  font-size: 30px;
+  color: #E1E1E199;
+}
+
+.market-share > h1 {
+  margin-top: 2rem;
+  font-size: 30px;
+  font-weight: 600;
+}
+/* .table-statistics{
+  
+} */
+
+/* tr >img{
+  height: ;
+} */
+/* .countries-cont >h3{
+  border-bottom: 1px solid #bdbdbd;
+  }
+
+  .Traffic-cont >h3{
+    border-bottom: 1px solid #bdbdbd;
+  }
+
+  .changes-cont > h3{
+    border-bottom: 1px solid #bdbdbd;
+  }
+
+  
+   */
+
+   @media screen and (min-width: 1300px) {
+    /* .first_line{
+        display: flex;
+        flex-direction: column;
+        gap: 3%;
+    }
+    .sec_line{
+        display: grid;
+        grid-template-columns: 49% 49%;
+        gap: 1%;
+        margin-top: 10px;
+    } */
+     .General{
+        width: 85%;
+     }
+
+
+     
+  
+}
+
+@media screen and (max-width: 1180px) {
+  .flex-target {
+    flex-direction: column;
+  }
+  .socio {
+    width: 100%;
+  }
+  .geography {
+    width: 100%;
+  }
+  .household{
+    width:45%;
+  }
+}
+
+
+
+
+   
+@media screen and (max-width: 1054px) {
+  .household{
+    width:44%;
+  }
+}
+
+@media screen and (max-width: 1000px){
+    .General {
+      display: flex;
+      margin-left: 0;
+      width: 100%;
+    }
+    .household{
+      width:46%;
+    }
+
+  .geography{
+    margin-top: 2rem;
+  }
+
+/* .stats_wrapper {
+  justify-content:center;
+} */
+  }
+
+@media screen and (max-width: 850px){
+  .household{
+    width:44%;
+  }
+}
+
+@media screen and (min-width: 1885px) {
+  #share-head{
+    font-size: 12px;
+  }
+
+  #share-content{
+    font-size: 16px;
+}
+}
+
+@media screen and (min-width: 2020px) {
+  #share-head{
+    font-size: 14px;
+  }
+  #share-content{
+    font-size: 18px;
+}
+}
+
+/* @media screen and (min-width:2000px){
+  .General{
+    width:90%;
+  }
+} */
+
+/* @media screen and (min-width: 1800px){
+  .General{
+    width: 85%;
+  }
+  } */
+
+@media screen and (min-width: 1100px)and (max-width:1200px) {
+  .General{
+    width: 76%;
+  }
+  .competitive{
+    margin: 12px 0 0 0;
+  }
+}
+@media screen and (max-width:450px) and (min-width: 0px){
+ 
+ .compatitor{
+  padding: 10px 0 !important;
+ }
+}
+@media screen and (max-width:1100px) and (min-width: 0px){
+  .stats_wrapper_compatitor{
+  flex-wrap: wrap;
+ }
+}
+
+@media screen and (min-width: 1300px)and (max-width:1500px) {
+  .General{
+    margin-right: 5px;
+  }
+
+}
+
+@media screen and (min-width: 1600px) and (max-width:1800px) {
+  .General{
+    margin-right: 5px;
+    width: 90%;
+
+  }
+}
+
+@media screen and (min-width: 1810px) and (max-width:1899px) {
+  .General{
+    margin-right: 5px;
+    width: 90.5%;
+  }
+
+}
+
+@media screen and (min-width: 1900px) and (max-width:2500px) {
+  .General{
+    margin-right: 5px;
+    width: 91%;
+  }
+}

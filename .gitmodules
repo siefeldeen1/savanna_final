@@ -1,0 +1,3 @@
+[submodule "deploy-test"]
+	path = deploy-test
+	url = https://github.com/Lolodusiji/deploy-test.git
