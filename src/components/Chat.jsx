@@ -28,7 +28,7 @@ const Chat = () => {
       data.conversation?.forEach(el => {
        if(el.role == "user"){
         const sent_mess = document.createElement("div")
-        sent_mess.classList.add("sent_message")
+        sent_mess.classList.add("sent_message_Chat")
         const inner_sent = document.createElement("div")
         inner_sent.classList.add("inner_sent")
         inner_sent.innerText=el.content
@@ -42,7 +42,7 @@ const Chat = () => {
         document.querySelector(".chat_body").appendChild(sent_mess)
        }else if(el.role == "assistant"){
         const sent_mess = document.createElement("div")
-        sent_mess.classList.add("received_message")
+        sent_mess.classList.add("received_message_chat")
         const inner_sent = document.createElement("div")
         inner_sent.classList.add("inner_received")
         inner_sent.innerText= el.content
@@ -65,7 +65,7 @@ const Chat = () => {
       data.conversation?.forEach(el => {
         if(el.role == "user"){
          const sent_mess = document.createElement("div")
-         sent_mess.classList.add("sent_message")
+         sent_mess.classList.add("sent_message_Chat")
          const inner_sent = document.createElement("div")
          inner_sent.classList.add("inner_sent")
          inner_sent.innerText=el.content
@@ -79,7 +79,7 @@ const Chat = () => {
          document.querySelector(".chat_body").appendChild(sent_mess)
         }else if(el.role == "assistant"){
          const sent_mess = document.createElement("div")
-         sent_mess.classList.add("received_message")
+         sent_mess.classList.add("received_message_chat")
          const inner_sent = document.createElement("div")
          inner_sent.classList.add("inner_received")
          inner_sent.innerText= el.content

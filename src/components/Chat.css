@@ -58,6 +58,36 @@
   width: 92%;
 }
 
+.sent_message_Chat{
+  display: flex;
+  justify-content: end;
+  flex-direction: row-reverse;
+  align-items: start;
+  gap: 10px;
+  max-width: 90%;
+  position: relative;
+  padding: 15px 10px;
+  background-color: #E6E6E6;
+  margin-left:auto;
+  border-radius: 10px;
+  margin-right: 1vw;
+}
+
+.received_message_chat{
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  gap: 10px;
+  max-width: 82%;
+  width: fit-content;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  padding:  10px;
+ margin-left: 1vw ;
+}
+
 .sent_message2 {
   display: flex;
   justify-content: end;

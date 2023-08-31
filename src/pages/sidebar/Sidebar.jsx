@@ -30,7 +30,7 @@ function sidebar() {
         const header = document.querySelector('.header');
         
         // const styles = window.getComputedStyle(header);
-        // window.onload=()=>{
+       window.onload=()=>{
             const real = header.clientHeight
             // const headerHeight = styles.height;
             // const paddHeight = styles.paddingTop;
@@ -38,12 +38,12 @@ function sidebar() {
        
             // set CSS as a value
             document.documentElement.style.setProperty("--sl-header-height", real+"px");
-          
+           }
            
             if(window.innerWidth < 880){
                 setclosed(true)
             }
-        // }
+        
         setusername(localStorage.getItem("user"))
         setemail(localStorage.getItem("email"))
     }, [])
