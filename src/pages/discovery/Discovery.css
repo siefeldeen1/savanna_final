@@ -142,18 +142,19 @@
     /* position: absolute;
     left: 13px;
     bottom: -22px; */
-    background-color: #444444;
-    border-radius: 50%;
+    /* background-color: #444444; */
+
     padding: 9px 7px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* .bot_body>img{
-    width: 30px;
-    height: 30px;
-} */
+.bot_body>img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
 
 .checklist_lower{
     display: flex;

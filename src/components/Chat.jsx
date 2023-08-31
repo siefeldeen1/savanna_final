@@ -49,7 +49,7 @@ const Chat = () => {
         const user_body = document.createElement("div")
         user_body.classList.add("bot_body")
         const img = document.createElement("img")
-        img.src="/imgs/chat_img.png"
+        img.src="/imgs/bot_img.png"
         user_body.appendChild(img)
         sent_mess.appendChild(inner_sent)
         sent_mess.appendChild(user_body)
@@ -86,7 +86,7 @@ const Chat = () => {
          const user_body = document.createElement("div")
          user_body.classList.add("bot_body")
          const img = document.createElement("img")
-         img.src="/imgs/chat_img.png"
+         img.src="/imgs/bot_img.png"
          user_body.appendChild(img)
          sent_mess.appendChild(inner_sent)
          sent_mess.appendChild(user_body)
