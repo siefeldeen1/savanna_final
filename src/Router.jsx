@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Navigate, useRoutes, useNavigate } from "react-router-dom";
+import { Navigate, useRoutes, useNavigate, useLocation } from "react-router-dom";
 import Dashboard from "./pages/dashboard/dashboard";
 import Sidebar from "./pages/sidebar/Sidebar";
 import Login from "./pages/login/Login";
@@ -13,12 +13,22 @@ import Support from "./pages/Support/Support";
 
 
 export default function Router() {
+  let location = useLocation();
   const navigate = useNavigate();
+
   useEffect(() => {
     if (!localStorage.getItem("user")) {
       navigate("/signup");
     }
+    
+    // if(location.pathname == "/support"){
+    //   document.querySelector('.font-lato').style.display="unset"
+    // }else{
+    //   document.querySelector('.font-lato').style.display="none"
+    // }
   }, []);
+  
+ 
   return useRoutes([
     { path: "/signup", element: <Login /> },
     {

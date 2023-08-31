@@ -3,12 +3,20 @@ import './Support.css'
 import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 import { BsArrowReturnRight } from 'react-icons/bs';
 import { PiArrowBendDownRightBold } from 'react-icons/pi';
+import { useLocation } from 'react-router-dom';
+import { useRef } from 'react';
+import { useEffect } from 'react';
 
 function Support () {
+  const location = useLocation()
+  const tawkMessengerRef = useRef();
+
+
+
+    
 
   
 
- 
   return (
     <div className='support_bg'>
       <div className='support_body'>
@@ -24,6 +32,8 @@ function Support () {
      <BsArrowReturnRight className='arrow_suport' />
      </div>
         <TawkMessengerReact
+
+                ref={tawkMessengerRef}
                 propertyId="636e033bb0d6371309ce7a9d"
                 widgetId="1ghirp90i"/>
                 

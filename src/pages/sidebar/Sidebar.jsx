@@ -48,6 +48,13 @@ function sidebar() {
         setemail(localStorage.getItem("email"))
     }, [])
     
+    const hide_tawk= ()=>{
+        document.querySelector("iframe").style.display="none"
+    }
+    const show_tawk =()=>{
+        document.querySelector("iframe").style.display="block !important"
+    }
+
   return (
     <>
     <Header menu={closed} active={()=>{setmenu(!menu)}}  />
@@ -82,17 +89,17 @@ function sidebar() {
 
                 }}
             >
-            <MenuItem component={<Link to="/" />} active={window.location.pathname === "/"} icon={<Discoverly />}
+            <MenuItem component={<Link to="/" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/"} icon={<Discoverly />}
             >Discovery</MenuItem>
-            <MenuItem component={<Link to="/dashboard" />}  active={window.location.pathname === "/dashboard"} icon={<Dashboard />}
+            <MenuItem component={<Link to="/dashboard" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/dashboard"} icon={<Dashboard />}
             > Dashboard</MenuItem>
-            <MenuItem component={<Link to="/social" />}  active={window.location.pathname === "/social"} icon={<Social />}
+            <MenuItem component={<Link to="/social" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/social"} icon={<Social />}
             > Social</MenuItem>
-            <MenuItem component={<Link to="/segmentation" />} active={window.location.pathname === "/segmentation"} icon={<Segment/>}
+            <MenuItem component={<Link to="/segmentation" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/segmentation"} icon={<Segment/>}
             > Segmentation</MenuItem>
-            <MenuItem component={<Link to="/competitors" />} active={window.location.pathname === "/competitors"} icon={<Competitors />}
+            <MenuItem component={<Link to="/competitors" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/competitors"} icon={<Competitors />}
             > Competitors </MenuItem>
-            <MenuItem component={<Link to="/channels" />} active={window.location.pathname === "/channels"} icon={<Channels />}
+            <MenuItem component={<Link to="/channels" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/channels"} icon={<Channels />}
             > Channels</MenuItem>
                         </Menu>
                         {closed== false&&
@@ -124,6 +131,7 @@ function sidebar() {
                               <MenuItem
                                     className="Support"
                                     component={<Link to="/support" />}
+                                    onClick={()=>{show_tawk()}}
                                     active={window.location.pathname === "/support"}
                                     icon={<PiChatTeardropTextBold size={25} />}
                                   >

@@ -8,3 +8,15 @@
 .ps-active  > svg > path{
  fill: white !important; 
 }
+
+iframe{
+  display: none !important;
+}
+iframe{
+  display: none !important;
+}
+
+.widget-visible{
+  display: none !important;
+
+}

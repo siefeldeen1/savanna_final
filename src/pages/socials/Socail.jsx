@@ -8,7 +8,12 @@ import { useContext } from "react";
 import { MainContext } from '../../../utils/MainContext';
 
 function Socail() {
-  const [bar_info, setbar_info] = useState();
+  const [bar_info, setbar_info] = useState({
+    "positive": 0,
+    "negative": 0,
+    "neutral": 0,
+    "mixed": 0
+});
   const [graph_data, setgraph_data] = useState();
   const [graph_val, setgraph_val] = useState();
   const [table, settable] = useState();

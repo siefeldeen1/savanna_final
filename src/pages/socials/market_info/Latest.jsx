@@ -13,7 +13,7 @@ function Latest() {
     
     useEffect(() => {
     
-        fetch(`${import.meta.env.VITE_BACKEND_API}/apis/social/important_conversations/`,{
+        fetch(`${import.meta.env.VITE_BACKEND_API}/apis/social/latest_conversations/`,{
             method:"post",
             headers:{"content-type":"application/json"},
             body:JSON.stringify({

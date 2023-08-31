@@ -182,16 +182,7 @@ function Discovery() {
         send()
       }
 }
-React.useEffect(() => {
-  if (window.Tawk_API) {
-    window.Tawk_API.hideWidget();
-  }
-  // return () => {
-  //   if (window.Tawk_API) {
-  //     window.Tawk_API.showWidget();
-  //   }
-  // };
-}, []);
+
   return (
     <div className='discovery'>
         <div className='chat'>
