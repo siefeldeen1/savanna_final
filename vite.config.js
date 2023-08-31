@@ -3,12 +3,12 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig(
-  { "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }] 
+  // { "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }] 
   
-  // {
-  //   "rewrites":  [
-  //     {"source": "/(.*)", "destination": "/"}
-  //   ]
-  // }
+  {
+    "rewrites":  [
+      {"source": "/(.*)", "destination": "/"}
+    ]
+  
   
 })
