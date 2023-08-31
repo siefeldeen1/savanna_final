@@ -12,6 +12,13 @@ import './Sidebar.css'
 import Header from '../header/Header';
 import { useContext } from 'react';
 import { MainContext } from '../../../utils/MainContext';
+import Discoverly from '../../../public/sidebar_Icons/discovery'
+import Dashboard from '../../../public/sidebar_Icons/dashboard'
+import Social from '../../../public/sidebar_Icons/social'
+import Segment from '../../../public/sidebar_Icons/segmentation'
+import Competitors from '../../../public/sidebar_Icons/competitors'
+import Channels from '../../../public/sidebar_Icons/channels'
+
 
 function sidebar() {
     const [closed, setclosed] = useState(false)
@@ -49,7 +56,7 @@ function sidebar() {
             <Sidebar backgroundColor="#131313" className="sidebar" collapsed={closed== true? true:false} collapsedWidth={0} >
                 <div className='limited_sidebar'>
                         <Menu
-                
+                    
                 menuItemStyles={{
                     // button: {
                     
@@ -64,6 +71,7 @@ function sidebar() {
                     if (level === 0)
                         return {
                         color: active ? 'white' : '#9FA8C7',
+                        // fill:active ? 'white !important' : '#9FA8C7 !important',
                         backgroundColor: active ? '#2A2D34' : undefined,
                         '&:hover': {
                             backgroundColor: '#2A2D34',
@@ -74,17 +82,17 @@ function sidebar() {
 
                 }}
             >
-            <MenuItem component={<Link to="/" />} active={window.location.pathname === "/"} icon={<BiSearchAlt2 style={{transform:"rotate(90deg)"}}size={25}/>}
+            <MenuItem component={<Link to="/" />} active={window.location.pathname === "/"} icon={<Discoverly />}
             >Discovery</MenuItem>
-            <MenuItem component={<Link to="/dashboard" />}  active={window.location.pathname === "/dashboard"} icon={<MdDashboardCustomize style={{transform:"rotate(180deg)"}}size={25}/>}
+            <MenuItem component={<Link to="/dashboard" />}  active={window.location.pathname === "/dashboard"} icon={<Dashboard />}
             > Dashboard</MenuItem>
-            <MenuItem component={<Link to="/social" />}  active={window.location.pathname === "/social"} icon={<PiChartLineUpBold size={25}/>}
+            <MenuItem component={<Link to="/social" />}  active={window.location.pathname === "/social"} icon={<Social />}
             > Social</MenuItem>
-            <MenuItem component={<Link to="/segmentation" />} active={window.location.pathname === "/segmentation"} icon={<BsFillPersonFill size={25}/>}
+            <MenuItem component={<Link to="/segmentation" />} active={window.location.pathname === "/segmentation"} icon={<Segment/>}
             > Segmentation</MenuItem>
-            <MenuItem component={<Link to="/competitors" />} active={window.location.pathname === "/competitors"} icon={<PiChartPieSliceFill size={25}/>}
+            <MenuItem component={<Link to="/competitors" />} active={window.location.pathname === "/competitors"} icon={<Competitors />}
             > Competitors </MenuItem>
-            <MenuItem component={<Link to="/channels" />} active={window.location.pathname === "/channels"} icon={<RiFileChartFill size={25}/>}
+            <MenuItem component={<Link to="/channels" />} active={window.location.pathname === "/channels"} icon={<Channels />}
             > Channels</MenuItem>
                         </Menu>
                         {closed== false&&

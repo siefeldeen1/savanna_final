@@ -2,7 +2,7 @@
 
 .header{
     background-color: #171717;
-    padding: 17px 10PX;
+    padding: 10px 10PX;
     display: grid;
     justify-content: space-between;
     align-items: center;
@@ -57,9 +57,9 @@
 }
 
 .today{
-    border-radius: 20px;
+    border-radius: 12px;
     background: #FFF;
-    padding: 5px 16px;
+    padding: 2px 17px;
     color: black !important;
     display: flex;
     flex-direction: column;
@@ -68,7 +68,7 @@
     font-family: "Inter";
     font-size: 16px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: normal;
 }
 

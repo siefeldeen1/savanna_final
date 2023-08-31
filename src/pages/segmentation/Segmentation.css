@@ -16,6 +16,7 @@
 .segmentation {
   padding: 13px 0 13px 0;
   /* overflow: hidden; */
+  padding-top:0;
 }
 
 .Geo-container {

@@ -89,7 +89,7 @@ gap: 10px;
 }
 
 .speedo{
-    width: 46%;
+    width: 58%;
     margin: 0 auto;
 }
 
@@ -97,6 +97,14 @@ gap: 10px;
     font-weight: 600;
 }
 
+.top_google{
+color: #000;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-transform: capitalize;
+}
 
 .loader_chart{
     border-radius: 12px;

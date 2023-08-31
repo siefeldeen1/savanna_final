@@ -34,6 +34,7 @@
     flex-direction: column;
     gap: 16%;
     border-radius: 12px;
+    padding: 10px 0;
 }
 .lower_chat{
     display: flex;
@@ -78,25 +79,33 @@
 .sent_message{
     display: flex;
     justify-content: end;
-    width: 98%;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+    max-width: 90%;
     position: relative;
+    padding: 15px 10px;
+    background-color: #E6E6E6;
+    margin-left:auto;
+    border-radius: 10px;
+    margin-right: 10px;
 }
 
 .inner_sent{
-    margin-right: 35px;
+    /* margin-right: 35px; */
     color: #363636;
-    font-family: "Roboto";
-    font-size: 16px;
+    font-family: "Poppins";
+    font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: 18px; 
-    padding: 10px;
+   
 }
 .user_body{
-    position: absolute;
+    /* position: absolute;
     right: -0;
-    bottom: -22px;
-    
+    bottom: -22px; */
+    display: flex;
 }
 
 .user_body>img{
@@ -108,28 +117,31 @@
 .received_message{
     display: flex;
     justify-content: start;
-    width: 98%;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    gap: 10px;
+    max-width: 88%;
+    width: fit-content;
     position: relative;
-   
+    background-color: white;
+    border-radius: 10px;
+    padding:  10px;
+   margin-left: 10px;
 }
 
 .inner_received{
-    margin-left: 38px;
-    color: #363636;
-    font-family: "Roboto";
-    font-size: 16px;
+    /* margin-left: 38px; */
+    color: #525151;
+    font-family: "Poppins";
+    font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: 18px; 
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-   
 }
 .bot_body{
-    position: absolute;
+    /* position: absolute;
     left: 13px;
-    bottom: -22px;
+    bottom: -22px; */
     background-color: #444444;
     border-radius: 50%;
     padding: 9px 7px;

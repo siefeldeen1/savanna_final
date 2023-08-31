@@ -1,7 +1,8 @@
 import React from 'react'
 import './Support.css'
 import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
-
+import { BsArrowReturnRight } from 'react-icons/bs';
+import { PiArrowBendDownRightBold } from 'react-icons/pi';
 
 function Support () {
 
@@ -18,6 +19,10 @@ function Support () {
         </div>
         <span className='braces'>{`}`}</span>
       </div>
+
+     <div >
+     <BsArrowReturnRight className='arrow_suport' />
+     </div>
         <TawkMessengerReact
                 propertyId="636e033bb0d6371309ce7a9d"
                 widgetId="1ghirp90i"/>

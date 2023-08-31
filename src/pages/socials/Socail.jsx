@@ -161,12 +161,12 @@ function Socail() {
         <div className="bar_market">
           <div className="keywords_header">
             <h2 style={{ fontSize: "27px" }}>Correlated Keywords</h2>
-            <h4 style={{ color: "#9A9A9A", fontWeight: "500" }}>
+            <h4 style={{ color: "#9A9A9A", fontWeight: "500",fontSize:"18px" }}>
               Market Research
             </h4>
           </div>
-          <div>
-            <Bar options={option} data={data} />
+          <div className="socail_graph" >
+            <Bar options={option} data={data}  style={{width:"100%",height:"100%"}}/>
           </div>
         </div>
 
@@ -177,15 +177,15 @@ function Socail() {
           <table className="social-table">
             <tr>
               <th className="table-head" style={{ borderRadius: "10px 0 0 0" }}>Query</th>
-              <th className="table-head">Monthly Searches</th>
-              <th className="table-head"style={{ borderRadius: "0 10px 0 0" }}>Competition</th>
+              <th className="table-head" style={{textAlign:"center"}}>Monthly Searches</th>
+              <th className="table-head"style={{ borderRadius: "0 10px 0 0",textAlign:"center" }}>Competition</th>
             </tr>
             {table?.query_search_volume?.map((e, i) => {
               return (
                 <tr id="roww" key={i}>
-                  <td>{e.search_query}</td>
-                  <td>{e.monthly_searches}</td>
-                  <td>
+                  <td style={{width:"35%"}}>{e.search_query}</td>
+                  <td style={{textAlign:"center"}}>{e.monthly_searches}</td>
+                  <td  style={{textAlign:"center"}}>
                     {e.competition == "LOW" && (
                       <div
                         className="table_card"

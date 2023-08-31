@@ -6,9 +6,21 @@ function Latest() {
 
     const [impo, setimpo] = useState()
 
+    const day = new Date().getDate()
+    const mounth = new Date().getMonth()+1
+    const year = new Date().getFullYear()
+    const full_date = `${year}-${mounth}-${day}`
+    
     useEffect(() => {
     
-        fetch(`${import.meta.env.VITE_BACKEND_API}/apis/social/important_conversations`).then((res)=> res.json())
+        fetch(`${import.meta.env.VITE_BACKEND_API}/apis/social/important_conversations/`,{
+            method:"post",
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify({
+              email:localStorage.getItem("email"),
+              date:full_date
+            })
+          }).then((res)=> res.json())
         .then((data)=>{            
             setimpo(data)
         })
@@ -21,15 +33,15 @@ function Latest() {
 
             return(
                 <div key={i} style={{display:'flex',flexDirection:"column",gap:"10px"}}>
-                    <Facts title={`${e.title}`} url={`${e.url}`}
-                        body={`${e.text}`}
+                    <Facts title={`${e.title}`} date={`${e.date_posted}`}
+                        body={`${e.description}`}
                     />
                     <hr  className='facts_hr'/>
                 </div>
             )
         })
         }
-        <Facts title={"Where to do market research"} date={"5 mins"}
+        {/* <Facts title={"Where to do market research"} date={"5 mins"}
             body={"Hi everyone, I wanted a little info since I have half an idea that has been buzzing me for a lifetime. Where do you do all your market research?"}
         />
         <hr  className='facts_hr'/>
@@ -48,7 +60,7 @@ function Latest() {
         <Facts title={"The number one marketing mistake indie developers make is not doing any market research."} date={"9 hours"}
             body={"When they hear the word marketing, most developers think of posting on social networks and sending keys to YouTubers, but they completely ignore market research, the first and most important part of marketing."}
         />
-        <hr  className='facts_hr'/>
+        <hr  className='facts_hr'/> */}
     </div>
 </div>
   )

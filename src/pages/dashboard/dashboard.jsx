@@ -16,8 +16,8 @@ function dashboard() {
     const [trends, settrends] = useState()
     const [keywords, setkeywords] = useState({})
     const [mono_valu, setmono_valu] = useState()
-    const [market, setmarket] = useState()
-    const [bussins, setbussins] = useState()
+    const [market, setmarket] = useState(0)
+    const [bussins, setbussins] = useState(0)
 
     const day = new Date().getDate()
     const mounth = new Date().getMonth()+1
@@ -170,7 +170,7 @@ function dashboard() {
             </div>
 
             <div className='google_sear'>
-                <h3>Top Google Searches</h3>
+                <h3 className='top_google'>Top Google Searches</h3>
                 <hr />
                 { keywords?.top_google_searches?.map((e,i) => {
                         return(
@@ -190,7 +190,7 @@ function dashboard() {
                             />
                                 <div style={{fontWeight:"500"}}>{e.search_query}</div>
                             </div>
-                                <h4>{e.monthly_searches}</h4>
+                                <h4>{e.monthly_searches.toLocaleString()}</h4>
                         </div>
                         )  
                     })
@@ -214,7 +214,7 @@ function dashboard() {
                     strokeLinecap: "butt",
                     trailColor: "#eee",
                     textColor: '#141414',
-                    textSize: '25px',
+                    textSize: '20px',
                 
                     })}
                     />
@@ -224,7 +224,7 @@ function dashboard() {
             <div className='loader_chart'>
                 <div className='loader_title'>
                     <Mout/>
-                    <h6 style={{color:"black",fontWeight:"700"}}>+ 23</h6> 
+                    <h6 style={{color:"black",fontWeight:"600",fontSize:"17px"}}>Competitive Landscape</h6> 
                  </div>
                 <div className='loader_cont'> 
                     <div style={{fontSize:"14px",fontWeight:"400"}}>Division of market share among the market players</div>
@@ -239,9 +239,9 @@ function dashboard() {
             </div>
 
             <div className='info_wid'>
-                <h1 style={{fontSize:"1.5rem"}}>TOTAL REACHABLE MARKET</h1>
+                <h1 style={{fontSize:"2vw",fontWeight:"500"}}>TOTAL REACHABLE MARKET</h1>
                 <div style={{fontSize:"12px",fontWeight:"600",color:" rgba(255, 255, 255, 0.40)"}}>Estimated number of people you can reach online every month</div>
-                <h1>{market}</h1>
+                <h1 style={{fontSize:"2vw"}}>{market?.toLocaleString()}</h1>
             </div>
       </div>
     </div>
