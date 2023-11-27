@@ -70,6 +70,8 @@
   border-radius: 7px;
   gap: 20px;
   color: rgb(0 0 0 / 81%);
+  text-overflow: ellipsis;
+  
 
 }
 
@@ -83,7 +85,7 @@
   width: 70%;
   color: #000;
   font-family: "Poppins";
-  font-size: 10px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;

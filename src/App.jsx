@@ -7,6 +7,8 @@ import { useEffect } from 'react';
 import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 import { useRef } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
+
 
 function App() {
  const [username, setusername] = useState()
@@ -43,7 +45,7 @@ const tawkMessengerRef = useRef();
       current_day, setcurrent_day,
     }}>
     <Router/>
-    
+    <Analytics />
     </MainContext.Provider>
   
   </>

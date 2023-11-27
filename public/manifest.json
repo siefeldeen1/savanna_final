@@ -1,0 +1,32 @@
+{
+    "name": "savanna",
+    "short_name": "savanna",
+    "theme_color": "#fff",
+    "background_color": "#fff",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+    
+    {
+      "src": "./manifest pics/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./manifest pics/logo256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "./manifest pics/logo384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "./manifest pics/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+    ]
+}

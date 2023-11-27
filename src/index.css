@@ -6,8 +6,9 @@
 }
 
 .ps-active  > svg > path{
- fill: white !important; 
+ fill: black !important; 
 }
+
 
 iframe{
   display: none !important;

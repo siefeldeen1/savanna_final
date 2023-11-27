@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function Facts({title,body,date,url}) {
+
+  useEffect(() => {
+      document.querySelectorAll(".facts_bodyy").forEach(e => {
+         e.innerHTML.slice(0,300)
+        console.log(e.innerHTML.slice(0,300));
+      });
+  
+  }, [])
+  
+
   return (
     <div className='factsz'>
         <div className='facts_header'>

@@ -1,0 +1,110 @@
+.bigbodygetstart{
+    width:100vw;
+    height:100vh;
+    background-color: white;
+}
+
+.getstared_body{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+    margin: 4% auto;
+    margin-bottom: 0;
+}
+
+.getstarted_class{
+    /* margin: 50px 0; */
+    color: #000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    /* line-height: 14px; */
+}
+
+.grid_getstart{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 20px;
+    width: 100%;
+    height: 20vh;
+}
+
+.bodyofadd{
+    border-radius: 24px;
+    background: #F8F8F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.add_icon_class{
+    font-size: 60px;
+}
+
+.dashed_border_get{
+    border-radius: 24px;
+    border: 1px dashed #B9B9B9;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.jump_backin{
+    color: #AFAFAF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    /* line-height: 14px; */
+    margin-left: 25px;
+}
+
+.getstart2grid{
+    display: grid;
+    grid-template-columns: 78% 22%;
+    gap: 20px;
+    width: 100%;
+    height: 40vh;
+    margin-bottom: 10px;
+}
+
+.getstart_contair{
+    border-radius: 24px;
+    background: #F8F8F8;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 700px) and (min-width: 0px){
+    .bigbodygetstart{
+        height: fit-content;
+    }
+    
+    .getstarted_class{
+        margin: 0;
+    }
+    
+    .getstart2grid{
+        display: flex;
+        flex-direction: column;
+    } 
+}
+
+@media screen and (max-width: 800px) and (min-width: 701px){
+    .bigbodygetstart{
+        height: fit-content;
+    }
+    
+    .getstarted_class{
+        margin: 0;
+    }
+}

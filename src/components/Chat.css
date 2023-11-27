@@ -2,7 +2,7 @@
   border-radius: 0px 12px 12px 0px !important;
 }
 .chat_market {
-  border-radius: 0 12px 12px 0;
+  border-radius: 12px;
     background: rgba(120, 120, 120, 0.10);
     box-shadow: -24px 0 80px #314f7c05;
     height: calc(97vh - var(--sl-header-height));
@@ -14,7 +14,7 @@
     top:calc(12px + var(--sl-header-height));;
     /* z-index: 99999999; */
     right: 12px;
-    border-radius: 0 23px 13px 0;
+    /* border-radius: 0 23px 13px 0; */
     width: 25%;
     /* margin-top: 11px; */
 }
@@ -64,7 +64,7 @@
   flex-direction: row-reverse;
   align-items: start;
   gap: 10px;
-  max-width: 90%;
+  max-width: 78%;
   position: relative;
   padding: 15px 10px;
   background-color: #E6E6E6;

@@ -34,7 +34,7 @@ function Latest() {
             return(
                 <div key={i} style={{display:'flex',flexDirection:"column",gap:"10px"}}>
                     <Facts title={`${e.title}`} date={`${e.date_posted}`}
-                        body={`${e.description}`}
+                      body={`${e.description.slice(0,255)+"..."}`}
                     />
                     <hr  className='facts_hr'/>
                 </div>

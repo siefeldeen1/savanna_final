@@ -1,10 +1,9 @@
 .discovery{
-    display: grid;
-    grid-template-columns: 68% 32%;
-    width: 100%;
+    /* display: grid;
+    grid-template-columns: 68% 32%; */
+    width: 80%;
     background: white;
-    /* padding: 10px; */
-
+    margin: 0 auto;
     border-radius: 12px;
     height: fit-content;
 }
@@ -19,17 +18,15 @@
     height: calc(99vh - var(--sl-header-height));
     flex-direction: column;
     gap: 14px;
-
-  background: #F6F6F6;
+    margin-top: 10px;
     /* padding-top: 10px; */
-    
 }
 
 .chat_body{
     height: 89%;
     width: 100%;
     overflow-y: auto;
-    background-color: #F6F6F6;
+    background-color: white;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -79,13 +76,13 @@
 .sent_message{
     display: flex;
     justify-content: end;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: start;
     gap: 10px;
-    max-width: 90%;
+    max-width: 80%;
     position: relative;
     padding: 15px 10px;
-    background-color: #E6E6E6;
+    /* background-color: #E6E6E6; */
     margin-left:auto;
     border-radius: 10px;
     margin-right: 2.5vw;
@@ -111,6 +108,7 @@
 .user_body>img{
     width: 40px;
     height: 40px;
+    border-radius: 50%;
 }
 
 
@@ -118,14 +116,15 @@
     display: flex;
     justify-content: start;
     align-items: flex-start;
-    flex-direction: row-reverse;
+
+    flex-direction: column;
     gap: 10px;
     max-width: 82%;
     width: fit-content;
     position: relative;
     background-color: white;
     border-radius: 10px;
-    padding:  10px;
+    padding:  10px 15px;
    margin-left: 2.5vw;
 }
 
@@ -144,16 +143,24 @@
     bottom: -22px; */
     /* background-color: #444444; */
 
-    padding: 9px 7px;
+    padding: 9px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 12px;
 }
 
 .bot_body>img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+.agent_name{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
 }
 
 .checklist_lower{

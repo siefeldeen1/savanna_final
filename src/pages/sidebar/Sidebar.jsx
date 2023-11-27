@@ -8,6 +8,7 @@ import { PiChartPieSliceFill } from 'react-icons/pi';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { PiChatTeardropTextBold } from 'react-icons/pi';
 import { RiFileChartFill } from 'react-icons/ri';
+import { RiSettingsFill } from "react-icons/ri";
 import './Sidebar.css'
 import Header from '../header/Header';
 import { useContext } from 'react';
@@ -25,10 +26,12 @@ function sidebar() {
     const [menu, setmenu] = useState(false)
     const{ username, setusername} = useContext(MainContext)
     const{ email, setemail} = useContext(MainContext)
+    const [pfp, setpfp] = useState()
 
     useEffect(() => {
+
         const header = document.querySelector('.header');
-        
+        setpfp(localStorage.getItem("profilePic"))
         // const styles = window.getComputedStyle(header);
        window.onload=()=>{
             const real = header.clientHeight
@@ -42,6 +45,7 @@ function sidebar() {
            
             if(window.innerWidth < 880){
                 setclosed(true)
+                
             }
         
         setusername(localStorage.getItem("user"))
@@ -60,108 +64,111 @@ function sidebar() {
     <Header menu={closed} active={()=>{setmenu(!menu)}}  />
     <div style={{display:"flex",position:"relative"}}>
 
-            <Sidebar backgroundColor="#131313" className="sidebar" collapsed={closed== true? true:false} collapsedWidth={0} >
-                <div className='limited_sidebar'>
-                        <Menu
-                    
-                menuItemStyles={{
-                    // button: {
-                    
-                    //     '&:hover': {
-                    //        backgroundColor: 'green',
-                    //     },
-                    // },
+            
+            {menu == false ?
+            <Sidebar backgroundColor="#fff" className="sidebar" style={{display:closed? "none":"unset"}} collapsed={closed== true? true:false} collapsedWidth={0} >
+            <div className='limited_sidebar'>
+                    <Menu
                 
-                    button: ({ level, active, disabled }) => {
-                        
-                    // only apply styles on first level elements of the tree
-                    if (level === 0)
-                        return {
-                        color: active ? 'white' : '#9FA8C7',
-                        // fill:active ? 'white !important' : '#9FA8C7 !important',
-                        backgroundColor: active ? '#2A2D34' : undefined,
+            menuItemStyles={{
+                // button: {
+                
+                //     '&:hover': {
+                //        backgroundColor: 'green',
+                //     },
+                // },
+            
+                button: ({ level, active, disabled }) => {
+                    
+                // only apply styles on first level elements of the tree
+                if (level === 0)
+                    return {
+                        color: active ? 'black' : '#9FA8C7',
+                        // backgroundColor: "red",
                         '&:hover': {
-                            backgroundColor: '#2A2D34',
+                            // color:"black ",
+                            // backgroundColor: 'transparent',
                         },
-                        };
-                        
-                    },
+                    };
+                    
+                },
 
-                }}
-            >
-            <MenuItem component={<Link to="/" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/"} icon={<Discoverly />}
-            >Discovery</MenuItem>
-            <MenuItem component={<Link to="/dashboard" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/dashboard"} icon={<Dashboard />}
-            > Dashboard</MenuItem>
-            <MenuItem component={<Link to="/social" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/social"} icon={<Social />}
-            > Social</MenuItem>
-            <MenuItem component={<Link to="/segmentation" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/segmentation"} icon={<Segment/>}
-            > Segmentation</MenuItem>
-            <MenuItem component={<Link to="/competitors" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/competitors"} icon={<Competitors />}
-            > Competitors </MenuItem>
-            <MenuItem component={<Link to="/channels" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/channels"} icon={<Channels />}
-            > Channels</MenuItem>
-                        </Menu>
-                        {closed== false&&
-                        <div className='support_user'> 
-                           <Menu
-                             menuItemStyles={{
-                              // button: {
-                              
-                              //     '&:hover': {
-                              //        backgroundColor: 'green',
-                              //     },
-                              // },
+            }}
+        >
+        <MenuItem component={<Link to="/" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/"} icon={<Discoverly />}
+        ></MenuItem>
+        <MenuItem component={<Link to="/dashboard" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/dashboard"} icon={<Dashboard />}
+        > </MenuItem>
+        <MenuItem component={<Link to="/social" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/social"} icon={<Social />}
+        > </MenuItem>
+        <MenuItem component={<Link to="/segmentation" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/segmentation"} icon={<Segment/>}
+        > </MenuItem>
+        <MenuItem component={<Link to="/competitors" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/competitors"} icon={<Competitors />}
+        >  </MenuItem>
+        <MenuItem component={<Link to="/channels" />} onClick={()=>{hide_tawk()}} active={window.location.pathname === "/channels"} icon={<Channels />}
+        > </MenuItem>
+                    </Menu>
+                    {closed== false&&
+                    <div className='support_user'> 
+                       <Menu
+                         menuItemStyles={{
+                          // button: {
                           
-                              button: ({ level, active, disabled }) => {
-                                  
-                              // only apply styles on first level elements of the tree
-                              if (level === 0)
-                                  return {
-                                  color: active ? 'white' : '#9FA8C7',
-                                  backgroundColor: active ? '#2A2D34' : undefined,
-                                  '&:hover': {
-                                      backgroundColor: '#2A2D34',
-                                  },
-                                  };
-                                  
+                          //     '&:hover': {
+                          //        backgroundColor: 'green',
+                          //     },
+                          // },
+                      
+                          button: ({ level, active, disabled }) => {
+                              
+                          // only apply styles on first level elements of the tree
+                          if (level === 0)
+                              return {
+                              color: active ? 'black' : '#9FA8C7',
+                              backgroundColor: "transparent",
+                              '&:hover': {
+                                //   color:"black",
+                                //   backgroundColor: 'transparent',
                               },
-          
-                          }}>
-                              <MenuItem
-                                    className="Support"
-                                    component={<Link to="/support" />}
-                                    onClick={()=>{show_tawk()}}
-                                    active={window.location.pathname === "/support"}
-                                    icon={<PiChatTeardropTextBold size={25} />}
-                                  >
-                                    {" "}
-                                    Support
-                                </MenuItem>
-                             </Menu>
-                           <div className='user_info'>
-                            <div className='user_img'>
-                                <img src="/imgs/user.png" alt="" />
-                                <div className='user_status'>
-                                    Legacy User
-                                </div>
-                            </div>
-
-                            <div className='user_data'>
-                                <h3>{username}</h3>
-                                {/* <h3>Josh Willer</h3> */}
-                                <p style={{fontSize:"10px",color:"#E9E9E9",fontWeight:"300"}}>{email}</p>
-                                {/* <p style={{fontSize:"10px",color:"#E9E9E9",fontWeight:"300"}}>joshwiller@gmail.com</p> */}
-                            </div>
-                            </div>
+                              };
+                              
+                          },
+      
+                      }}>
+                          {/* <MenuItem
+                                className="Support"
+                                component={<Link to="/support" />}
+                                onClick={()=>{show_tawk()}}
+                                active={window.location.pathname === "/support"}
+                                icon={<PiChatTeardropTextBold size={25} />}
+                              >
+                                {" "}
+                                
+                            </MenuItem> */}
+                         </Menu>
+                       {/* <div className='user_info'> */}
+                        <div className='user_img'>
+                            <img src={pfp} alt="" />
+                            {/* <div className='user_status'>
+                                Legacy User
+                            </div> */}
                         </div>
+
+                        {/* <div className='user_data'>
+                            <h3>{username}</h3>
+                            
+                            <p style={{fontSize:"10px",color:"#E9E9E9",fontWeight:"300"}}>{email}</p>
                            
-                        }
-                </div>
-            </Sidebar>
-            {menu == true &&
+                        </div> */}
+                        </div>
+                    // </div>
+                       
+                    }
+            </div>
+        </Sidebar>
+            :
                 <div style={{position:"absolute",top:"0",right:"-3px"}}>
-                     <Sidebar backgroundColor="#131313" className="sidebar"  >
+                    <Sidebar backgroundColor="#131313" className="sidebar"  >
                 <div className='limited_sidebar'>
                         <Menu
                 
@@ -178,10 +185,11 @@ function sidebar() {
                     // only apply styles on first level elements of the tree
                     if (level === 0)
                         return {
-                        color: active ? 'white' : '#9FA8C7',
-                        backgroundColor: active ? '#2A2D34' : undefined,
+                        color: active ? 'black' : '#9FA8C7',
+                        // backgroundColor: active ? '#2A2D34' : undefined,
                         '&:hover': {
-                            backgroundColor: '#2A2D34',
+                            color:"black",
+                            backgroundColor: 'transparent',
                         },
                         };
                         
@@ -201,29 +209,30 @@ function sidebar() {
             > Competitors </MenuItem>
             <MenuItem component={<Link to="/channels" />} active={window.location.pathname === "/channels"} icon={<RiFileChartFill size={20}/>}
             > Channels</MenuItem>
-                        </Menu>
-                       
-                            <div className='user_info'>
-                            {/* <MenuItem
+             <MenuItem
                                 className="Support"
                                 component={<Link to="/support" />}
                                 active={window.location.pathname === "/support"}
-                                icon={<PiChatTeardropTextBold size={25} />}
+                                icon={<RiSettingsFill  size={25} />}
                               >
                                 {" "}
-                                Support
-                            </MenuItem> */}
-                            <div className='user_img'>
-                                <img src="/imgs/user.png" alt="" />
-                                <div className='user_status'>
+                                Settings
+            </MenuItem>
+                        </Menu>
+                       
+                            <div className='user_info'>
+                           
+                            <div className='user_img' style={{margin:"unset"}}>
+                                <img src={pfp} alt="" />
+                                {/* <div className='user_status'>
                                     Legacy User
-                                </div>
+                                </div> */}
                             </div>
 
                             <div className='user_data'>
                                 <h3>{username}</h3>
                                 {/* <h3>Josh Willer</h3> */}
-                                <p style={{fontSize:"10px",color:"#E9E9E9",fontWeight:"300"}}>{email}</p>
+                                <p style={{fontSize:"10px",color:"black",fontWeight:"300"}}>{email}</p>
                             </div>
                             </div>
                      

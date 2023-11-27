@@ -166,9 +166,9 @@ function Socail() {
         <div className="bar_market">
           <div className="keywords_header">
             <h2 style={{ fontSize: "27px" }}>Correlated Keywords</h2>
-            <h4 style={{ color: "#9A9A9A", fontWeight: "500",fontSize:"18px" }}>
+            {/* <h4 style={{ color: "#9A9A9A", fontWeight: "500",fontSize:"18px" }}>
               Market Research
-            </h4>
+            </h4> */}
           </div>
           <div className="socail_graph" >
             <Bar options={option} data={data}  style={{width:"100%",height:"100%"}}/>

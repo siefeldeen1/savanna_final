@@ -11,7 +11,10 @@
     color: white;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
+}
+.line_grid>h1{
+   font-size: 2vw;
 }
 
 /* h6{

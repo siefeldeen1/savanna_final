@@ -162,7 +162,7 @@ function dashboard() {
       <div className="first_line">
             <div className="line_grid">
                 <h1>MARKET GROWTH</h1>
-                <h6 className="h6_tit">The market research industry has seen consistent growth over the last 5 years, and is expected to grow by 12.3% in 2023</h6>
+                {/* <h6 className="h6_tit">The market research industry has seen consistent growth over the last 5 years, and is expected to grow by 12.3% in 2023</h6> */}
                 <div style={{height:"38vh"}} className='line_div'>
                      <Line options={options} data={line_data1} style={{height:"100%",width:"100%"}}/>
                  </div>
@@ -215,6 +215,7 @@ function dashboard() {
                     trailColor: "#eee",
                     textColor: '#141414',
                     textSize: '20px',
+                    pathColor: `rgba(111, 7, 137, 1)`,
                 
                     })}
                     />

@@ -7,8 +7,7 @@ import { useEffect } from "react";
 
 const Chat = () => {
   const [message, setmessage] = useState("");
-
-
+  const [pfp, setpfp] = useState(localStorage.getItem("profilePic"))
   const{current_day, setcurrent_day} = useContext(MainContext)
 
   useEffect(() => {
@@ -22,7 +21,7 @@ const Chat = () => {
       })
     }).then((res)=> res.json())
     .then((data)=>{
-     console.log("imp",data);
+    //  console.log("imp",data);
      if(current_day.toString().split("-")[2] != new Date().getDate()){
       document.querySelector(".chat_body").innerHTML=""
       data.conversation?.forEach(el => {
@@ -35,7 +34,7 @@ const Chat = () => {
         const user_body = document.createElement("div")
         user_body.classList.add("user_body")
         const img = document.createElement("img")
-        img.src="/imgs/user.png"
+        img.src=pfp
         user_body.appendChild(img)
         sent_mess.appendChild(inner_sent)
         sent_mess.appendChild(user_body)
@@ -72,7 +71,7 @@ const Chat = () => {
          const user_body = document.createElement("div")
          user_body.classList.add("user_body")
          const img = document.createElement("img")
-         img.src="/imgs/user.png"
+         img.src=pfp
          user_body.appendChild(img)
          sent_mess.appendChild(inner_sent)
          sent_mess.appendChild(user_body)
@@ -102,15 +101,21 @@ const Chat = () => {
    
   }, [current_day])
 
-  const sent_mess_append = () => {
-    const sent_mess = document.createElement("div");
-    sent_mess.classList.add("sent_message2");
-    const inner_sent = document.createElement("div");
-    inner_sent.classList.add("inner_sent2");
-    inner_sent.innerText = message;
-    sent_mess.appendChild(inner_sent);
-    document.querySelector(".chat_body").appendChild(sent_mess);
-  };
+  const sent_mess_append = ()=>{
+    const sent_mess = document.createElement("div")
+    sent_mess.classList.add("sent_message")
+    const inner_sent = document.createElement("div")
+    inner_sent.classList.add("inner_sent")
+    inner_sent.innerText=message
+    const user_body = document.createElement("div")
+    user_body.classList.add("user_body")
+    const img = document.createElement("img")
+    img.src=pfp
+    user_body.appendChild(img)
+    sent_mess.appendChild(inner_sent)
+    sent_mess.appendChild(user_body)
+    document.querySelector(".chat_body").appendChild(sent_mess)
+  }
 
   const send = () => {
     sent_mess_append();
@@ -132,26 +137,23 @@ const Chat = () => {
     setmessage("");
   };
 
-  const received_mess_append = (e) => {
-    const sent_mess = document.createElement("div");
-    sent_mess.classList.add("received_message2");
-    const inner_sent = document.createElement("div");
-    inner_sent.classList.add("inner_received2");
-    const message = document.createElement("div");
-    message.innerText = e;
-
-    const img = document.createElement("img");
-    img.src = "/imgs/market_chat_icon.png";
-    img.classList.add("img_class");
-    inner_sent.appendChild(img);
-    inner_sent.appendChild(message);
-    sent_mess.appendChild(inner_sent);
-
-    document.querySelector(".chat_body").appendChild(sent_mess);
-    const chat_body = document.querySelector(".chat_body");
-    chat_body.scrollTo(0, chat_body.scrollHeight);
-  };
-
+  const received_mess_append = (e)=>{
+    const sent_mess = document.createElement("div")
+    sent_mess.classList.add("received_message")
+    const inner_sent = document.createElement("div")
+    inner_sent.classList.add("inner_received")
+    inner_sent.innerText= e
+    const user_body = document.createElement("div")
+    user_body.classList.add("bot_body")
+    const img = document.createElement("img")
+    img.src="/imgs/bot_img.png"
+    user_body.appendChild(img)
+    sent_mess.appendChild(inner_sent)
+    sent_mess.appendChild(user_body)
+    document.querySelector(".chat_body").appendChild(sent_mess)
+    const chat_body = document.querySelector(".chat_body")
+    chat_body.scrollTo(0, chat_body.scrollHeight)
+  }
   const enter_clicked = (e) => {
     if (e.keyCode === 13) {
       send();

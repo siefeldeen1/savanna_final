@@ -33,7 +33,8 @@ function Login() {
       
     useEffect(() => {
      if(localStorage.getItem("user")){
-      navigate('/dashboard')
+      navigate('/getStarted')
+      // navigate('/')
      }
     }, [])
     
@@ -41,16 +42,11 @@ function Login() {
       const handleClick =()=>{
         signInWithPopup(auth,provider).then((data)=>{
           // console.log(data.user.photoURL)
-          
           setemail(data.user.email)
           setusername(data.user.displayName)
           localStorage.setItem("user",data.user.displayName)
           localStorage.setItem("profilePic",data.user.photoURL)
           localStorage.setItem("email",data.user.email)
-          localStorage.setItem("")
-          // localStorage.setItem("profile picture",data.user.profilepicture)
-          // console.log(user,email,profilepicture)
-            // alert(`${data.user.email}`)
         })
         .catch((error) => {
           console.log(error);
@@ -58,32 +54,24 @@ function Login() {
         })
         .then((nav)=>{
           if(localStorage.getItem("user")){
-            navigate('/dashboard')
+            navigate('/getStarted')
+            // navigate('/')
            }
         })
     }
-    React.useEffect(() => {
-      if (window.Tawk_API) {
-        window.Tawk_API.hideWidget();
-      }
-      return () => {
-        if (window.Tawk_API) {
-          window.Tawk_API.showWidget();
-        }
-      };
-    }, []);
+
     return (
       <div className='login'>
-          <img className='big_img' src="/imgs/Sign up.png" alt="" />
+          {/* <img className='big_img' src="/imgs/Sign up.png" alt="" /> */}
           <div className='login_body'>
               <div className='login_logo'>
-                  {/* <img src="/imgs/login_logo.png" alt="" /> */}
+                  <img src="/imgs/login_logo2.png" alt="" />
                   <h1 className='logo_text_log'>SAVANNA</h1>
               </div>
   
               <div className='social_login'  onClick={()=>{handleClick()}}>
                   <FcGoogle color='#DC5425' size={23}/>
-                  <div className='social_text'>Google </div>
+                  <div className='social_text'>Sign In With Google </div>
               </div>
               {/* <div style={{color:" #9EA9AB",fontSize:"20px"}}>-OR-</div>
               <div className='social_login'>
