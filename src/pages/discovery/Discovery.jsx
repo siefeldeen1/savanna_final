@@ -302,7 +302,7 @@ function Discovery() {
     <div className='discovery'>
 
         <div className='chat'>
-        <h1>{param.group.replaceAll("_"," ")}</h1>
+        <h1>{param.group&& param.group.replaceAll("_"," ")}</h1>
           <div className='chat_body'>
 {/* 
             <div className='sent_message'>
